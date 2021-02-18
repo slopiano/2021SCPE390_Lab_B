@@ -66,6 +66,7 @@ bool isPrime(int a) {
 
 // 4
 bool isPrime(int a) {}
+//Zachary Zatuchni
 bool isPrimeAlt(int a) {
   if (a == 1 || a == 0) return false;
 
@@ -252,6 +253,7 @@ int addToEach(double x[], int length, int delta) {
 
 // 8
 int countEvens(int x[], int length) {}
+//Zachary Zatuchni
 int countEvensAlt(int x[], int length) {
   int count = 0;
   for (int i = 0; i < length; i++) {
