@@ -21,9 +21,18 @@ int sum(int a, int b){
   return sum;
 }
 // 2
-int prod(int a, int b) {}
+int prod(int a, int b) {
+  int total = 1;
+  for (int i = a; i<= b; i++)
+    total *= i;
+  return total;
+
+
+}
 // 3
-int sumsq(int a, int b) {}
+int sumsq(int a, int b) {
+  return (a*a)+(b*b);
+}
 // 4
 bool isPrime(int a) {
 	
@@ -64,20 +73,42 @@ int gcd(int a, int b) {}
 // 7
 int hypot(int a, int b) {}
 // 8
-int diffsq(int a, int b) {}
+int diffsq(int a, int b) {
+//Cameron Murphy
+  return pow(a,2)-pow(b,2);
+}
 // 9
 int mean2(int a, int b) {}
 // 10
 int mean3(int a, int b) {}
 // 11
-int min(int a, int b) {}
+int min(int a, int b) {
+  //Walter Wargacki
+  if(a != b){
+    if(a > b)
+      return a;
+    else
+      return b;
+  }
+  return a;
+}
 // 12
 int max(int a, int b) {}
 // 13
 bool isEven(int a) {}
 
-// 14
-double perimeter3(int x1, int y1, int x2, int y2, int x3, int y3) {}
+// 14-Jonathan Kubas
+double perimeter3(int x1, int y1, int x2, int y2, int x3, int y3) {
+  double dis_xy=0;
+  double dis_yz=0;
+  double dis_zx=0;
+  double per=0;
+  dis_xy=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+  dis_yz=sqrt((x3-x2)*(x3-x2)+(y3-y2)*(y3-y2));
+  dis_zx=sqer((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
+  per=dis_xy+dis_yz+dis_zx;
+  return per;
+}
 
 // array functions
 // 1
@@ -87,18 +118,37 @@ double mean(int x[], int length) {
     add = add + x[i];
   }
   return add / length;
+
+  /*//Walter Wargacki
+  double avg = 0;
+  for(int i = 0; i < length; i++)
+    avg += x[i];
+  avg /= length;
+  return avg;*/
 }
 
 // 2
-int max(int x[], int length) {}
+int max(int x[], int length) {
+  int value = 1;
+  for (int i = 1; i < length; i++)
+    if (x[i] > value)
+      value = x[i];
+  return value;
+
+}
 
 // 3
 int min(int x[], int length) {}
 
-// 4
-int prod(int x[], int length) {}
+// 4-Jonathan Kubas
+int prod(int x[], int length) {
+  int total=1;
+  for(int i=0; i<length; i++){
+    total=total*x[i];
+  }
+  return total;
+}
 
-<<<<<<< HEAD
 // 5 - Tahrim Imon
 int sum(int x[], int length) {
   int total = 0;
@@ -107,32 +157,38 @@ int sum(int x[], int length) {
   }
   return total;
 }
-=======
-// 5 - Calvin Zheng
-// Return the sum of all the values contained in array (x) of size n.
-int sum(int x[], int length) {
-  int total = 0;
-  for (int i = 0; i < length; i++) {
-    total += x[i];
-  }
-  return total;
-}
-
-// 5
-int sum(int x[], int length) {}
->>>>>>> 3cdce48b1500f60e99dec0c253f53de948e7dead
 
 // 6
 int demean(double x[], int length) { return 0; }
 
 // 7
-int addToEach(double x[], int length, int delta) {}
+int addToEach(double x[], int length, int delta) {
+  for (int i=0, i<length, i++){
+    x[i]+=delta;
+  }
+
+
+}
 
 // 8
 int countEvens(int x[], int length) {}
 
 // 9
-int reverse(int x[], int length) { return 0; }
+int reverse(int x[], int length) { 
+  // Cameron Murphy
+  int reversed[length];
+  int j = 0;
+  for (int i = length-1 ; i >= 0; i--){
+    reversed[j] = x[i];
+    j++;
+  }
+  for (int i = 0; i < length; i++ ){
+      x[i] = reversed[i];
+  }
+  
+  return 0; 
+}
+
 
 // 10
 int round(double x[], int length) {}
