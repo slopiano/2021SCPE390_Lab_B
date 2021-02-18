@@ -23,7 +23,9 @@ int sum(int a, int b){
 // 2
 int prod(int a, int b) {}
 // 3
-int sumsq(int a, int b) {}
+int sumsq(int a, int b) {
+  return (a*a)+(b*b);
+}
 // 4
 bool isPrime(int a) {}
 // 5 - Calvin Zheng
@@ -104,7 +106,13 @@ int sum(int x[], int length) {}
 int demean(double x[], int length) { return 0; }
 
 // 7
-int addToEach(double x[], int length, int delta) {}
+int addToEach(double x[], int length, int delta) {
+  for (int i=0, i<length, i++){
+    x[i]+=delta;
+  }
+
+
+}
 
 // 8
 int countEvens(int x[], int length) {}
