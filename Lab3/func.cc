@@ -15,6 +15,11 @@ using namespace std;
 int sum(int a, int b) {
   return a + b; 
 }
+// 1 Tahrim Imon
+int sum(int a, int b){
+  int sum = a+b;
+  return sum;
+}
 // 2
 int prod(int a, int b) {}
 // 3
@@ -62,8 +67,14 @@ int min(int x[], int length) {}
 // 4
 int prod(int x[], int length) {}
 
-// 5
-int sum(int x[], int length) {}
+// 5 - Tahrim Imon
+int sum(int x[], int length) {
+  int total = 0;
+  for(int i = 0; i < length; i++){
+    total+=x[i];
+  }
+  return total;
+}
 
 // 6
 int demean(double x[], int length) { return 0; }
