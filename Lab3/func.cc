@@ -86,7 +86,7 @@ int countEvensAlt(int x[], int length) {
   for (int i = 0; i < length; i++) {
     if (x[i] % 2 == 0) count++;
   }
-  return count;
+  return count; 
 }
 
 // 9

@@ -3,12 +3,9 @@ Mingxuan Chen
 Student:
 Samuel Schmitt
 Sebastian LoPiano
-<<<<<<< HEAD
 Christopher Kruger
 =======
-=======
 Kamen Kresnitchki
->>>>>>> 885851b09fec1538298b67f99ab629a8e766565b
 Calvin Zheng
 Christopher Kruger
 >>>>>>> bab4ae4c378649802d5aac76a77da14834bdce0c
@@ -24,3 +21,4 @@ Rayhan Howlader
 Mark Tuhacek
 Tahrim Imon
 David Valle-Montesdeoca
+Zachary Zatuchni
