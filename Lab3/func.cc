@@ -12,7 +12,9 @@ using namespace std;
 
 // scalar functions
 // 1
-int sum(int a, int b) {}
+int sum(int a, int b) {
+  return a + b; 
+}
 // 2
 int prod(int a, int b) {}
 // 3
@@ -43,7 +45,13 @@ double perimeter3(int x1, int y1, int x2, int y2, int x3, int y3) {}
 
 // array functions
 // 1
-double mean(int x[], int length) {}
+double mean(int x[], int length) {
+  double add;
+  for (int i = 0; i < length; i++) {
+    add = add + x[i];
+  }
+  return add / length;
+}
 
 // 2
 int max(int x[], int length) {}
