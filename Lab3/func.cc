@@ -50,11 +50,15 @@ int countPrimes(int a, int b) {
 int gcd(int a, int b) {}
 // 7
 int hypot(int a, int b) {}
-// 8
+// 8 - Chris Youngclaus
 int diffsq(int a, int b) {
+  int result = (a*a)-(b*b);
+  return result;
+}
+  
 //Cameron Murphy
   return pow(a,2)-pow(b,2);
-}
+
 // 9
 int mean2(int a, int b) {}
 // 10
@@ -148,8 +152,15 @@ int addToEach(double x[], int length, int delta) {
 
 }
 
-// 8
-int countEvens(int x[], int length) {}
+// 8 - Chris Youngclaus
+int countEvens(int x[], int length) {
+  int count = 0;
+  for (int i=0; i<sizeof(x); i++) {
+    if (x[i]%2 == 0) {
+      count++;
+  }
+  return count;
+}
 
 // 9
 int reverse(int x[], int length) { 
