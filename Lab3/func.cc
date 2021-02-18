@@ -21,7 +21,14 @@ int sum(int a, int b){
   return sum;
 }
 // 2
-int prod(int a, int b) {}
+int prod(int a, int b) {
+  int total = 1;
+  for (int i = a; i<= b; i++)
+    total *= i;
+  return total;
+
+
+}
 // 3
 int sumsq(int a, int b) {}
 // 4
@@ -84,7 +91,14 @@ double mean(int x[], int length) {
 }
 
 // 2
-int max(int x[], int length) {}
+int max(int x[], int length) {
+  int value = 1;
+  for (int i = 1; i < length; i++)
+    if (x[i] > value)
+      value = x[i];
+  return value;
+
+}
 
 // 3
 int min(int x[], int length) {}
