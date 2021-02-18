@@ -31,6 +31,13 @@ int prod(int a, int b) {
 }
 // 3
 int sumsq(int a, int b) {
+<<<<<<< HEAD
+  int sum
+  for (a; a<=b; a++)
+  sum += (a*a);
+  }
+  return sum;
+=======
   return (a*a)+(b*b);
 }
 
@@ -59,6 +66,7 @@ bool isPrime(int a) {
 	return primeStatus;
 }
 
+>>>>>>> df195c8f34852825db98128f2d85b80e42bf9840
 // 4
 bool isPrime(int a) {}
 
@@ -174,7 +182,12 @@ int max(int x[], int length) {
 }
 
 // 3
-int min(int x[], int length) {}
+int min(int x[], int length) {
+  int result = x[0];
+  for (int i = 1; i < length; i++)
+  result = min(result, x[i]);
+  return result;
+  }
 
 // 4-Jonathan Kubas
 int prod(int x[], int length) {
