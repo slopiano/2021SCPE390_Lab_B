@@ -54,8 +54,20 @@ int gcd(int a, int b) {
   return gcd(b, a % b);
 }
 // 7
+<<<<<<< HEAD
 int hypot(int a, int b) {}
 // 8 - Chris Youngclaus
+=======
+double hypot(int a, int b) 
+{
+    double hypot = 0;
+    double num = pow(a,2) + pow(b,2);
+    hypot = sqrt(num);
+    return hypot;
+
+}
+// 8
+>>>>>>> 44ecd86db67a09a8ed35e033cef81f91777192aa
 int diffsq(int a, int b) {
   int result = (a*a)-(b*b);
   return result;
@@ -163,6 +175,17 @@ int demean(double x[], int length) {
 return 0; }
 
 // 7
+<<<<<<< HEAD
+int addToEach(double x[], int length, int delta) 
+{
+  for (int i = 0; i < length; i++)
+  {
+    x[i] = i + delta;
+    return x[i];
+  }
+
+  }
+=======
 int addToEach(double x[], int length, int delta) {
   for (int i=0, i<length, i++){
     x[i]+=delta;
@@ -170,6 +193,7 @@ int addToEach(double x[], int length, int delta) {
 
 
 }
+>>>>>>> 4cf3918dd582b6498b6b66a6b713e2e004bf9efc
 
 // 8 - Chris Youngclaus
 int countEvens(int x[], int length) {
