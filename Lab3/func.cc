@@ -31,13 +31,11 @@ int prod(int a, int b) {
 }
 // 3
 int sumsq(int a, int b) {
-<<<<<<< HEAD
   int sum
   for (a; a<=b; a++)
   sum += (a*a);
   }
   return sum;
-=======
   return (a*a)+(b*b);
 }
 
@@ -66,9 +64,19 @@ bool isPrime(int a) {
 	return primeStatus;
 }
 
->>>>>>> df195c8f34852825db98128f2d85b80e42bf9840
 // 4
 bool isPrime(int a) {}
+//Zachary Zatuchni
+bool isPrimeAlt(int a) {
+  if (a == 1 || a == 0) return false;
+
+  for (int i = 2; i < (a/2)+1; i++) {
+    if (a % i == 0) return false;
+  }
+  return true;
+}
+// 5
+int count(int a, int b) {}
 
 // 5 - Calvin Zheng
 // returns the number of primes found between a and b inclusive
@@ -243,6 +251,15 @@ int addToEach(double x[], int length, int delta) {
   }
 
 
+// 8
+int countEvens(int x[], int length) {}
+//Zachary Zatuchni
+int countEvensAlt(int x[], int length) {
+  int count = 0;
+  for (int i = 0; i < length; i++) {
+    if (x[i] % 2 == 0) count++;
+  }
+  return count; 
 }
 
 // 8 - Chris Youngclaus
