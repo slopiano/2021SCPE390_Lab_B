@@ -51,7 +51,10 @@ int gcd(int a, int b) {}
 // 7
 int hypot(int a, int b) {}
 // 8
-int diffsq(int a, int b) {}
+int diffsq(int a, int b) {
+//Cameron Murphy
+  return pow(a,2)-pow(b,2);
+}
 // 9
 int mean2(int a, int b) {}
 // 10
@@ -108,7 +111,6 @@ int min(int x[], int length) {}
 // 4
 int prod(int x[], int length) {}
 
-<<<<<<< HEAD
 // 5 - Tahrim Imon
 int sum(int x[], int length) {
   int total = 0;
@@ -117,20 +119,6 @@ int sum(int x[], int length) {
   }
   return total;
 }
-=======
-// 5 - Calvin Zheng
-// Return the sum of all the values contained in array (x) of size n.
-int sum(int x[], int length) {
-  int total = 0;
-  for (int i = 0; i < length; i++) {
-    total += x[i];
-  }
-  return total;
-}
-
-// 5
-int sum(int x[], int length) {}
->>>>>>> 3cdce48b1500f60e99dec0c253f53de948e7dead
 
 // 6
 int demean(double x[], int length) { return 0; }
@@ -148,7 +136,21 @@ int addToEach(double x[], int length, int delta) {
 int countEvens(int x[], int length) {}
 
 // 9
-int reverse(int x[], int length) { return 0; }
+int reverse(int x[], int length) { 
+  // Cameron Murphy
+  int reversed[length];
+  int j = 0;
+  for (int i = length-1 ; i >= 0; i--){
+    reversed[j] = x[i];
+    j++;
+  }
+  for (int i = 0; i < length; i++ ){
+      x[i] = reversed[i];
+  }
+  
+  return 0; 
+}
+
 
 // 10
 int round(double x[], int length) {}
