@@ -55,6 +55,7 @@ int gcd(int a, int b) {
 }
 // 7
 <<<<<<< HEAD
+<<<<<<< HEAD
 int hypot(int a, int b) {}
 // 8 - Chris Youngclaus
 =======
@@ -66,6 +67,9 @@ double hypot(int a, int b)
     return hypot;
 
 }
+=======
+int hypot(int a, int b) {}
+>>>>>>> 7c53a66fb5dbd30985296127b1e26ed2b3c9cd01
 // 8
 >>>>>>> 44ecd86db67a09a8ed35e033cef81f91777192aa
 int diffsq(int a, int b) {
@@ -92,7 +96,14 @@ int min(int a, int b) {
   return a;
 }
 // 12
-int max(int a, int b) {}
+//Rayhan Howlader 
+int pythagTriple(int a, int b) {
+  double result = sqrt((a * a) * (b * b));
+  if (result == static_cast<int>(result))
+    return true;
+  else
+    return false;
+}
 // 13
 bool isEven(int a) {}
 
@@ -175,17 +186,6 @@ int demean(double x[], int length) {
 return 0; }
 
 // 7
-<<<<<<< HEAD
-int addToEach(double x[], int length, int delta) 
-{
-  for (int i = 0; i < length; i++)
-  {
-    x[i] = i + delta;
-    return x[i];
-  }
-
-  }
-=======
 int addToEach(double x[], int length, int delta) {
   for (int i=0, i<length, i++){
     x[i]+=delta;
@@ -193,7 +193,6 @@ int addToEach(double x[], int length, int delta) {
 
 
 }
->>>>>>> 4cf3918dd582b6498b6b66a6b713e2e004bf9efc
 
 // 8 - Chris Youngclaus
 int countEvens(int x[], int length) {
@@ -232,6 +231,9 @@ void print(int a[], int length) {
       cout << endl;
     }
   }
+
+
+	
 }
 
 int main() {
@@ -260,6 +262,7 @@ int main() {
   cout << "min(2,5)=" << min(2, 5) << '\n';
   cout << "isEven(5)=" << isEven(5) << '\n';
   cout << "perimeter of tri=" << perimeter3(0, 0, 3, 0, 3, 3) << '\n';
+  cout << pythagTriple(3, 4) << endl;
 
   // array problems
   int arr[] = {1, 4, 3, 2};
