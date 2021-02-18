@@ -25,7 +25,29 @@ int prod(int a, int b) {}
 // 3
 int sumsq(int a, int b) {}
 // 4
-bool isPrime(int a) {}
+bool isPrime(int a) {
+	
+	bool primeStatus = true;
+	
+	if( a == 0 || a == 1) {
+		primeStatus = false;
+		return primeStatus;
+	}
+	else
+	{
+		for(i = 2; i <= a/2; i++)
+		{
+			if( a % i == 0)
+			{
+				primeStatus = false;
+				return primeStatus;
+				break;
+			}
+		}
+	}
+	
+	return primeStatus;
+}
 // 5 - Calvin Zheng
 // returns the number of primes found between a and b inclusive
 int countPrimes(int a, int b) {
