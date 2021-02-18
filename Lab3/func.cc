@@ -12,7 +12,14 @@ using namespace std;
 
 // scalar functions
 // 1
-int sum(int a, int b) {}
+int sum(int a, int b) {
+  return a + b; 
+}
+// 1 Tahrim Imon
+int sum(int a, int b){
+  int sum = a+b;
+  return sum;
+}
 // 2
 int prod(int a, int b) {
   int total = 1;
@@ -26,8 +33,17 @@ int prod(int a, int b) {
 int sumsq(int a, int b) {}
 // 4
 bool isPrime(int a) {}
-// 5
-int coutPrimes(int a, int b) {}
+// 5 - Calvin Zheng
+// returns the number of primes found between a and b inclusive
+int countPrimes(int a, int b) {
+  int total = 0;
+  for (int i = a; i <= b; i++) {
+    if (isPrime(i)) {
+      total++;
+    }
+  }
+  return total;
+}
 // 6
 int gcd(int a, int b) {}
 // 7
@@ -50,7 +66,13 @@ double perimeter3(int x1, int y1, int x2, int y2, int x3, int y3) {}
 
 // array functions
 // 1
-double mean(int x[], int length) {}
+double mean(int x[], int length) {
+  double add;
+  for (int i = 0; i < length; i++) {
+    add = add + x[i];
+  }
+  return add / length;
+}
 
 // 2
 int max(int x[], int length) {
@@ -68,8 +90,29 @@ int min(int x[], int length) {}
 // 4
 int prod(int x[], int length) {}
 
+<<<<<<< HEAD
+// 5 - Tahrim Imon
+int sum(int x[], int length) {
+  int total = 0;
+  for(int i = 0; i < length; i++){
+    total+=x[i];
+  }
+  return total;
+}
+=======
+// 5 - Calvin Zheng
+// Return the sum of all the values contained in array (x) of size n.
+int sum(int x[], int length) {
+  int total = 0;
+  for (int i = 0; i < length; i++) {
+    total += x[i];
+  }
+  return total;
+}
+
 // 5
 int sum(int x[], int length) {}
+>>>>>>> 3cdce48b1500f60e99dec0c253f53de948e7dead
 
 // 6
 int demean(double x[], int length) { return 0; }
