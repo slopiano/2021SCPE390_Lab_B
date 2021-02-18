@@ -15,12 +15,61 @@ using namespace std;
 int sum(int a, int b) {
   return a + b; 
 }
+// 1 Tahrim Imon
+int sum(int a, int b){
+  int sum = a+b;
+  return sum;
+}
 // 2
-int prod(int a, int b) {}
+int prod(int a, int b) {
+  int total = 1;
+  for (int i = a; i<= b; i++)
+    total *= i;
+  return total;
+
+
+}
 // 3
-int sumsq(int a, int b) {}
+int sumsq(int a, int b) {
+<<<<<<< HEAD
+  int sum
+  for (a; a<=b; a++)
+  sum += (a*a);
+  }
+  return sum;
+=======
+  return (a*a)+(b*b);
+}
+
+// 4 - Kamen Kresnitchki
+bool isPrime(int a) {
+	
+	bool primeStatus = true;
+	
+	if( a == 0 || a == 1) {
+		primeStatus = false;
+		return primeStatus;
+	}
+	else
+	{
+		for(i = 2; i <= a/2; i++)
+		{
+			if( a % i == 0)
+			{
+				primeStatus = false;
+				return primeStatus;
+				break;
+			}
+		}
+	}
+	
+	return primeStatus;
+}
+
+>>>>>>> df195c8f34852825db98128f2d85b80e42bf9840
 // 4
 bool isPrime(int a) {}
+<<<<<<< HEAD
 bool isPrimeAlt(int a) {
   if (a == 1 || a == 0) return false;
 
@@ -31,6 +80,9 @@ bool isPrimeAlt(int a) {
 }
 // 5
 int count(int a, int b) {}
+=======
+
+>>>>>>> a24185057ef729e0245dc499e4e5dc14bde2d8a8
 // 5 - Calvin Zheng
 // returns the number of primes found between a and b inclusive
 int countPrimes(int a, int b) {
@@ -42,25 +94,78 @@ int countPrimes(int a, int b) {
   }
   return total;
 }
-// 6
-int gcd(int a, int b) {}
+// 6 - Andrew Capro
+// returns the greatest common denominator between two integers
+int gcd(int a, int b) {
+  if (b == 0) 
+  return a;
+  return gcd(b, a % b);
+}
 // 7
-int hypot(int a, int b) {}
-// 8
-int diffsq(int a, int b) {}
+double hypot(int a, int b) 
+{
+    double hypot = 0;
+    double num = pow(a,2) + pow(b,2);
+    hypot = sqrt(num);
+    return hypot;
+
+}
+
+// 8 - Chris Youngclaus
+int diffsq(int a, int b) {
+  int result = (a*a)-(b*b);
+  return result;
+}
+  
+//Cameron Murphy
+  return pow(a,2)-pow(b,2);
+
 // 9
 int mean2(int a, int b) {}
-// 10
-int mean3(int a, int b) {}
+// 10 Nixon Puertollano
+int mean3(int a, int b) {
+  int average = 0;
+	average = a + b;  
+	average /= 2;
+	cout << average << endl; 
+	return average;
+  }
+
 // 11
-int min(int a, int b) {}
+int min(int a, int b) {
+  //Walter Wargacki
+  if(a != b){
+    if(a > b)
+      return a;
+    else
+      return b;
+  }
+  return a;
+}
 // 12
-int max(int a, int b) {}
+//Rayhan Howlader 
+int pythagTriple(int a, int b) {
+  double result = sqrt((a * a) * (b * b));
+  if (result == static_cast<int>(result))
+    return true;
+  else
+    return false;
+}
 // 13
 bool isEven(int a) {}
 
-// 14
-double perimeter3(int x1, int y1, int x2, int y2, int x3, int y3) {}
+// 14-Jonathan Kubas
+double perimeter3(int x1, int y1, int x2, int y2, int x3, int y3) {
+  double dis_xy=0;
+  double dis_yz=0;
+  double dis_zx=0;
+  double per=0;
+  dis_xy=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+  dis_yz=sqrt((x3-x2)*(x3-x2)+(y3-y2)*(y3-y2));
+  dis_zx=sqer((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
+  per=dis_xy+dis_yz+dis_zx;
+  return per;
+}
 
 // array functions
 // 1
@@ -70,36 +175,88 @@ double mean(int x[], int length) {
     add = add + x[i];
   }
   return add / length;
+
+  /*//Walter Wargacki
+  double avg = 0;
+  for(int i = 0; i < length; i++)
+    avg += x[i];
+  avg /= length;
+  return avg;*/
 }
 
 // 2
-int max(int x[], int length) {}
+int max(int x[], int length) {
+  int value = 1;
+  for (int i = 1; i < length; i++)
+    if (x[i] > value)
+      value = x[i];
+  return value;
+
+}
 
 // 3
-int min(int x[], int length) {}
+int min(int x[], int length) {
+  int result = x[0];
+  for (int i = 1; i < length; i++)
+  result = min(result, x[i]);
+  return result;
+  }
 
-// 4
-int prod(int x[], int length) {}
-
-// 5 - Calvin Zheng
-// Return the sum of all the values contained in array (x) of size n.
-int sum(int x[], int length) {
-  int total = 0;
-  for (int i = 0; i < length; i++) {
-    total += x[i];
+// 4-Jonathan Kubas
+int prod(int x[], int length) {
+  int total=1;
+  for(int i=0; i<length; i++){
+    total=total*x[i];
   }
   return total;
 }
 
-// 5
-int sum(int x[], int length) {}
+//4 - Kamen Kresnitchki
+int prod(int x[], int length) {
+	
+	double product = 1;
+	
+	for(int i = 0; i < length; i++)
+	{
+		product = product * x[i];
+	}
+	return product;
+}
 
-// 6
-int demean(double x[], int length) { return 0; }
+// 5 - Tahrim Imon
+int sum(int x[], int length) {
+  int total = 0;
+  for(int i = 0; i < length; i++){
+    total+=x[i];
+  }
+  return total;
+}
+
+// 6 - Andrew Capro
+// finds the mean of the array and subtracts it from each term within the array and prints the array out
+int demean(double x[], int length) { 
+	double sum = 0;
+  for (int i = 0; i < length; i++){
+    sum = sum + x[i];
+  }
+  double meanmean = 0;
+  meanmean = sum / length;
+  for (int i = 0; i < length; i++){
+    x[i] = x[i] - meanmean;
+  }
+  for (int i = 0; i < length; i++){
+    cout << x[i] << ", ";
+  } 
+return 0; }
 
 // 7
-int addToEach(double x[], int length, int delta) {}
+int addToEach(double x[], int length, int delta) {
+  for (int i=0, i<length, i++){
+    x[i]+=delta;
+  }
 
+
+<<<<<<< HEAD
 // 8
 int countEvens(int x[], int length) {}
 int countEvensAlt(int x[], int length) {
@@ -108,13 +265,44 @@ int countEvensAlt(int x[], int length) {
     if (x[i] % 2 == 0) count++;
   }
   return count; 
+=======
+}
+
+// 8 - Chris Youngclaus
+int countEvens(int x[], int length) {
+  int count = 0;
+  for (int i=0; i<sizeof(x); i++) {
+    if (x[i]%2 == 0) {
+      count++;
+  }
+  return count;
+>>>>>>> a24185057ef729e0245dc499e4e5dc14bde2d8a8
 }
 
 // 9
-int reverse(int x[], int length) { return 0; }
+int reverse(int x[], int length) { 
+  // Cameron Murphy
+  int reversed[length];
+  int j = 0;
+  for (int i = length-1 ; i >= 0; i--){
+    reversed[j] = x[i];
+    j++;
+  }
+  for (int i = 0; i < length; i++ ){
+      x[i] = reversed[i];
+  }
+  
+  return 0; 
+}
 
-// 10
-int round(double x[], int length) {}
+
+// 10 Nixon Puertollano
+int round(double x[], int length) {
+	for (int i=0; i < length; i++){
+		x[i] = round(x[i]);
+		}
+	return x;
+	}
 
 void print(int a[], int length) {
   for (int i = 0; i < length; i++) {
@@ -123,6 +311,21 @@ void print(int a[], int length) {
       cout << endl;
     }
   }
+/*	
+// Rayhan Howlader 
+int max(int x[], int n) {
+  int maximum = 0;
+  for (int i = 0; i < n; i++) {
+    if (x[i] >= maximum) {
+      maximum = x[i];
+    }
+  }
+  return maximum;
+};
+*/
+
+
+	
 }
 
 int main() {
@@ -151,6 +354,7 @@ int main() {
   cout << "min(2,5)=" << min(2, 5) << '\n';
   cout << "isEven(5)=" << isEven(5) << '\n';
   cout << "perimeter of tri=" << perimeter3(0, 0, 3, 0, 3, 3) << '\n';
+  cout << pythagTriple(3, 4) << endl;
 
   // array problems
   int arr[] = {1, 4, 3, 2};
