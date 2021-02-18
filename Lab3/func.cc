@@ -19,8 +19,16 @@ int prod(int a, int b) {}
 int sumsq(int a, int b) {}
 // 4
 bool isPrime(int a) {}
+bool isPrimeAlt(int a) {
+  if (a == 1 || a == 0) return false;
+
+  for (int i = 2; i < (a/2)+1; i++) {
+    if (a % i == 0) return false;
+  }
+  return true;
+}
 // 5
-int coutPrimes(int a, int b) {}
+int count(int a, int b) {}
 // 6
 int gcd(int a, int b) {}
 // 7
@@ -65,6 +73,13 @@ int addToEach(double x[], int length, int delta) {}
 
 // 8
 int countEvens(int x[], int length) {}
+int countEvensAlt(int x[], int length) {
+  int count = 0;
+  for (int i = 0; i < length; i++) {
+    if (x[i] % 2 == 0) count++;
+  }
+  return count;
+}
 
 // 9
 int reverse(int x[], int length) { return 0; }
