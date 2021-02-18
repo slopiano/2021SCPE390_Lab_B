@@ -19,8 +19,17 @@ int prod(int a, int b) {}
 int sumsq(int a, int b) {}
 // 4
 bool isPrime(int a) {}
-// 5
-int coutPrimes(int a, int b) {}
+// 5 - Calvin Zheng
+// returns the number of primes found between a and b inclusive
+int countPrimes(int a, int b) {
+  int total = 0;
+  for (int i = a; i <= b; i++) {
+    if (isPrime(i)) {
+      total++;
+    }
+  }
+  return total;
+}
 // 6
 int gcd(int a, int b) {}
 // 7
@@ -53,6 +62,16 @@ int min(int x[], int length) {}
 
 // 4
 int prod(int x[], int length) {}
+
+// 5 - Calvin Zheng
+// Return the sum of all the values contained in array (x) of size n.
+int sum(int x[], int length) {
+  int total = 0;
+  for (int i = 0; i < length; i++) {
+    total += x[i];
+  }
+  return total;
+}
 
 // 5
 int sum(int x[], int length) {}
