@@ -30,7 +30,12 @@ int prod(int a, int b) {
 
 }
 // 3
-int sumsq(int a, int b) {}
+int sumsq(int a, int b) {
+  int sum
+  for (a; a<=b; a++)
+  sum += (a*a);
+  }
+  return sum;
 // 4
 bool isPrime(int a) {}
 // 5 - Calvin Zheng
@@ -101,7 +106,12 @@ int max(int x[], int length) {
 }
 
 // 3
-int min(int x[], int length) {}
+int min(int x[], int length) {
+  int result = x[0];
+  for (int i = 1; i < length; i++)
+  result = min(result, x[i]);
+  return result;
+  }
 
 // 4
 int prod(int x[], int length) {}
