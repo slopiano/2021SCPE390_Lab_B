@@ -68,8 +68,13 @@ int countPrimes(int a, int b) {
   }
   return total;
 }
-// 6
-int gcd(int a, int b) {}
+// 6 - Andrew Capro
+// returns the greatest common denominator between two integers
+int gcd(int a, int b) {
+  if (b == 0) 
+  return a;
+  return gcd(b, a % b);
+}
 // 7
 int hypot(int a, int b) {}
 // 8
@@ -158,8 +163,22 @@ int sum(int x[], int length) {
   return total;
 }
 
-// 6
-int demean(double x[], int length) { return 0; }
+// 6 - Andrew Capro
+// finds the mean of the array and subtracts it from each term within the array and prints the array out
+int demean(double x[], int length) { 
+	double sum = 0;
+  for (int i = 0; i < length; i++){
+    sum = sum + x[i];
+  }
+  double meanmean = 0;
+  meanmean = sum / length;
+  for (int i = 0; i < length; i++){
+    x[i] = x[i] - meanmean;
+  }
+  for (int i = 0; i < length; i++){
+    cout << x[i] << ", ";
+  } 
+return 0; }
 
 // 7
 int addToEach(double x[], int length, int delta) {
