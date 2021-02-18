@@ -21,7 +21,14 @@ int sum(int a, int b){
   return sum;
 }
 // 2
-int prod(int a, int b) {}
+int prod(int a, int b) {
+  int total = 1;
+  for (int i = a; i<= b; i++)
+    total *= i;
+  return total;
+
+
+}
 // 3
 int sumsq(int a, int b) {
   return (a*a)+(b*b);
@@ -50,7 +57,16 @@ int mean2(int a, int b) {}
 // 10
 int mean3(int a, int b) {}
 // 11
-int min(int a, int b) {}
+int min(int a, int b) {
+  //Walter Wargacki
+  if(a != b){
+    if(a > b)
+      return a;
+    else
+      return b;
+  }
+  return a;
+}
 // 12
 int max(int a, int b) {}
 // 13
@@ -67,10 +83,24 @@ double mean(int x[], int length) {
     add = add + x[i];
   }
   return add / length;
+
+  /*//Walter Wargacki
+  double avg = 0;
+  for(int i = 0; i < length; i++)
+    avg += x[i];
+  avg /= length;
+  return avg;*/
 }
 
 // 2
-int max(int x[], int length) {}
+int max(int x[], int length) {
+  int value = 1;
+  for (int i = 1; i < length; i++)
+    if (x[i] > value)
+      value = x[i];
+  return value;
+
+}
 
 // 3
 int min(int x[], int length) {}
