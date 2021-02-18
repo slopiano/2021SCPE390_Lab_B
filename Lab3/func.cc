@@ -31,13 +31,11 @@ int prod(int a, int b) {
 }
 // 3
 int sumsq(int a, int b) {
-<<<<<<< HEAD
   int sum
   for (a; a<=b; a++)
   sum += (a*a);
   }
   return sum;
-=======
   return (a*a)+(b*b);
 }
 
@@ -66,10 +64,8 @@ bool isPrime(int a) {
 	return primeStatus;
 }
 
->>>>>>> df195c8f34852825db98128f2d85b80e42bf9840
 // 4
 bool isPrime(int a) {}
-<<<<<<< HEAD
 bool isPrimeAlt(int a) {
   if (a == 1 || a == 0) return false;
 
@@ -80,9 +76,7 @@ bool isPrimeAlt(int a) {
 }
 // 5
 int count(int a, int b) {}
-=======
 
->>>>>>> a24185057ef729e0245dc499e4e5dc14bde2d8a8
 // 5 - Calvin Zheng
 // returns the number of primes found between a and b inclusive
 int countPrimes(int a, int b) {
