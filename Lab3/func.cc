@@ -33,7 +33,7 @@ int prod(int a, int b) {
 int sumsq(int a, int b) {
   return (a*a)+(b*b);
 }
-// 4
+// 4 - Kamen Kresnitchki
 bool isPrime(int a) {
 	
 	bool primeStatus = true;
@@ -147,6 +147,18 @@ int prod(int x[], int length) {
     total=total*x[i];
   }
   return total;
+}
+
+//4 - Kamen Kresnitchki
+int prod(int x[], int length) {
+	
+	double product = 1;
+	
+	for(int i = 0; i < length; i++)
+	{
+		product = product * x[i];
+	}
+	return product;
 }
 
 // 5 - Tahrim Imon
