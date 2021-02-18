@@ -40,7 +40,14 @@ int countPrimes(int a, int b) {
 // 6
 int gcd(int a, int b) {}
 // 7
-int hypot(int a, int b) {}
+double hypot(int a, int b) 
+{
+    double hypot = 0;
+    double num = pow(a,2) + pow(b,2);
+    hypot = sqrt(num);
+    return hypot;
+
+}
 // 8
 int diffsq(int a, int b) {}
 // 9
@@ -104,7 +111,15 @@ int sum(int x[], int length) {}
 int demean(double x[], int length) { return 0; }
 
 // 7
-int addToEach(double x[], int length, int delta) {}
+int addToEach(double x[], int length, int delta) 
+{
+  for (int i = 0; i < length; i++)
+  {
+    x[i] = i + delta;
+    return x[i];
+  }
+
+  }
 
 // 8
 int countEvens(int x[], int length) {}
