@@ -231,6 +231,18 @@ void print(int a[], int length) {
       cout << endl;
     }
   }
+/*	
+// Rayhan Howlader 
+int max(int x[], int n) {
+  int maximum = 0;
+  for (int i = 0; i < n; i++) {
+    if (x[i] >= maximum) {
+      maximum = x[i];
+    }
+  }
+  return maximum;
+};
+*/
 
 
 	
