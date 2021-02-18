@@ -101,8 +101,15 @@ int diffsq(int a, int b) {
 
 // 9
 int mean2(int a, int b) {}
-// 10
-int mean3(int a, int b) {}
+// 10 Nixon Puertollano
+int mean3(int a, int b) {
+  int average = 0;
+	average = a + b;  
+	average /= 2;
+	cout << average << endl; 
+	return average;
+  }
+
 // 11
 int min(int a, int b) {
   //Walter Wargacki
@@ -252,8 +259,13 @@ int reverse(int x[], int length) {
 }
 
 
-// 10
-int round(double x[], int length) {}
+// 10 Nixon Puertollano
+int round(double x[], int length) {
+	for (int i=0; i < length; i++){
+		x[i] = round(x[i]);
+		}
+	return x;
+	}
 
 void print(int a[], int length) {
   for (int i = 0; i < length; i++) {
