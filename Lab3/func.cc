@@ -33,6 +33,7 @@ int prod(int a, int b) {
 int sumsq(int a, int b) {
   return (a*a)+(b*b);
 }
+
 // 4 - Kamen Kresnitchki
 bool isPrime(int a) {
 	
@@ -57,6 +58,10 @@ bool isPrime(int a) {
 	
 	return primeStatus;
 }
+
+// 4
+bool isPrime(int a) {}
+
 // 5 - Calvin Zheng
 // returns the number of primes found between a and b inclusive
 int countPrimes(int a, int b) {
@@ -68,15 +73,32 @@ int countPrimes(int a, int b) {
   }
   return total;
 }
-// 6
-int gcd(int a, int b) {}
+// 6 - Andrew Capro
+// returns the greatest common denominator between two integers
+int gcd(int a, int b) {
+  if (b == 0) 
+  return a;
+  return gcd(b, a % b);
+}
 // 7
-int hypot(int a, int b) {}
-// 8
+double hypot(int a, int b) 
+{
+    double hypot = 0;
+    double num = pow(a,2) + pow(b,2);
+    hypot = sqrt(num);
+    return hypot;
+
+}
+
+// 8 - Chris Youngclaus
 int diffsq(int a, int b) {
+  int result = (a*a)-(b*b);
+  return result;
+}
+  
 //Cameron Murphy
   return pow(a,2)-pow(b,2);
-}
+
 // 9
 int mean2(int a, int b) {}
 // 10
@@ -93,7 +115,14 @@ int min(int a, int b) {
   return a;
 }
 // 12
-int max(int a, int b) {}
+//Rayhan Howlader 
+int pythagTriple(int a, int b) {
+  double result = sqrt((a * a) * (b * b));
+  if (result == static_cast<int>(result))
+    return true;
+  else
+    return false;
+}
 // 13
 bool isEven(int a) {}
 
@@ -170,8 +199,22 @@ int sum(int x[], int length) {
   return total;
 }
 
-// 6
-int demean(double x[], int length) { return 0; }
+// 6 - Andrew Capro
+// finds the mean of the array and subtracts it from each term within the array and prints the array out
+int demean(double x[], int length) { 
+	double sum = 0;
+  for (int i = 0; i < length; i++){
+    sum = sum + x[i];
+  }
+  double meanmean = 0;
+  meanmean = sum / length;
+  for (int i = 0; i < length; i++){
+    x[i] = x[i] - meanmean;
+  }
+  for (int i = 0; i < length; i++){
+    cout << x[i] << ", ";
+  } 
+return 0; }
 
 // 7
 int addToEach(double x[], int length, int delta) {
@@ -182,8 +225,15 @@ int addToEach(double x[], int length, int delta) {
 
 }
 
-// 8
-int countEvens(int x[], int length) {}
+// 8 - Chris Youngclaus
+int countEvens(int x[], int length) {
+  int count = 0;
+  for (int i=0; i<sizeof(x); i++) {
+    if (x[i]%2 == 0) {
+      count++;
+  }
+  return count;
+}
 
 // 9
 int reverse(int x[], int length) { 
@@ -212,6 +262,21 @@ void print(int a[], int length) {
       cout << endl;
     }
   }
+/*	
+// Rayhan Howlader 
+int max(int x[], int n) {
+  int maximum = 0;
+  for (int i = 0; i < n; i++) {
+    if (x[i] >= maximum) {
+      maximum = x[i];
+    }
+  }
+  return maximum;
+};
+*/
+
+
+	
 }
 
 int main() {
@@ -240,6 +305,7 @@ int main() {
   cout << "min(2,5)=" << min(2, 5) << '\n';
   cout << "isEven(5)=" << isEven(5) << '\n';
   cout << "perimeter of tri=" << perimeter3(0, 0, 3, 0, 3, 3) << '\n';
+  cout << pythagTriple(3, 4) << endl;
 
   // array problems
   int arr[] = {1, 4, 3, 2};
