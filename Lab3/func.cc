@@ -256,7 +256,6 @@ int addToEach(double x[], int length, int delta) {
   }
 
 
-<<<<<<< HEAD
 // 8
 int countEvens(int x[], int length) {}
 int countEvensAlt(int x[], int length) {
@@ -265,7 +264,6 @@ int countEvensAlt(int x[], int length) {
     if (x[i] % 2 == 0) count++;
   }
   return count; 
-=======
 }
 
 // 8 - Chris Youngclaus
@@ -276,7 +274,6 @@ int countEvens(int x[], int length) {
       count++;
   }
   return count;
->>>>>>> a24185057ef729e0245dc499e4e5dc14bde2d8a8
 }
 
 // 9
