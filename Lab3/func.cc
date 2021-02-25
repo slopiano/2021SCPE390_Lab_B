@@ -27,6 +27,13 @@ int prod(int a, int b) {
     total *= i;
   return total;
 
+//2 - Nicholas Lim
+int prod (int a, int b){
+  for (int i =a; i<b; i++) {
+    temp *= i +1;
+  }
+  return temp;
+
 
 }
 // 3
@@ -243,6 +250,18 @@ int demean(double x[], int length) {
     cout << x[i] << ", ";
   } 
 return 0; }
+
+//6 - Nicholas Lim
+  void demean (double arr[],double len){
+    double temp = 0.0;
+    for (int i = 0; i < len; i++){
+        temp += (double)arr[i];
+    }
+    temp/=len;
+    for (int i = 0; i < len; i++){
+        arr[i] -= temp;
+    }    
+}
 
 // 7
 int addToEach(double x[], int length, int delta) {
