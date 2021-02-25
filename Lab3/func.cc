@@ -154,7 +154,13 @@ int pythagTriple(int a, int b) {
     return false;
 }
 // 13
-bool isEven(int a) {}
+// Kenneth Kim
+bool isEven(int a) {
+    if a % 2 == 0;
+        return true;
+    else
+        return false;
+}
 
 // 14-Jonathan Kubas
 double perimeter3(int x1, int y1, int x2, int y2, int x3, int y3) {
